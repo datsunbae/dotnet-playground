@@ -47,8 +47,8 @@
         <label for="gender" class="form-label">Gender</label>
         <div>
           <select id="gender" [(ngModel)]="character.gender" name="gender">
-            <option *ngFor="let gender of genders" [value]="gender">
-              {{ gender }}
+            <option *ngFor="let gender of genderOptions" [value]="gender.value">
+              {{ gender.lable }}
             </option>
           </select>
         </div>

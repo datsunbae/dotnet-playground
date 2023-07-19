@@ -1,7 +1,7 @@
 export enum Gender {
-  Male = 'Male',
-  Female = 'Female',
-  Other = 'Other',
+  Male,
+  Female,
+  Other,
 }
 
 export interface Character {

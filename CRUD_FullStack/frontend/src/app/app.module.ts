@@ -11,7 +11,13 @@ import { CharacterEditComponent } from './components/characters/character-edit/c
 import { ConfirmModelComponent } from './components/common/confirm-model/confirm-model.component';
 
 @NgModule({
-  declarations: [AppComponent, CharacterListComponent, CharacterAddComponent, CharacterEditComponent, ConfirmModelComponent],
+  declarations: [
+    AppComponent,
+    CharacterListComponent,
+    CharacterAddComponent,
+    CharacterEditComponent,
+    ConfirmModelComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
