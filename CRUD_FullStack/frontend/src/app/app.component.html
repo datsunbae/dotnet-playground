@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Kimetsu no Yaiba App</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [ngClass]="{ active: activeItem === 'characters' }"
+            (click)="setActiveItem('characters')"
+            [routerLink]="['/characters']"
+            >Character</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [ngClass]="{ active: activeItem === 'characters/add' }"
+            (click)="setActiveItem('characters/add')"
+            [routerLink]="['characters/add']"
+            >Add Character</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

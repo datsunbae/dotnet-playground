@@ -1,0 +1,67 @@
+<div class="container my-5">
+  <div class="row">
+    <form (ngSubmit)="onSubmit()" class="col-6" #form="ngForm">
+      <div class="mb-3">
+        <label for="id" class="form-label">Id</label>
+        <input
+          type="text"
+          class="form-control"
+          id="id"
+          name="id"
+          [(ngModel)]="character.id"
+          disabled
+        />
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          [(ngModel)]="character.name"
+        />
+        <label for="birthday" class="form-label">BirthDay</label>
+        <input
+          type="text"
+          class="form-control"
+          id="birthday"
+          name="birthday"
+          [(ngModel)]="character.birthday"
+          pattern="[0-3][0-9]/[0-1][0-9]"
+        />
+        <label for="height" class="form-label">Height</label>
+        <input
+          type="number"
+          class="form-control"
+          id="height"
+          name="height"
+          [(ngModel)]="character.height"
+        />
+        <label for="weight" class="form-label">Weight</label>
+        <input
+          type="number"
+          class="form-control"
+          id="weight"
+          name="weight"
+          [(ngModel)]="character.weight"
+        />
+        <label for="gender" class="form-label">Gender</label>
+        <div>
+          <select id="gender" [(ngModel)]="character.gender" name="gender">
+            <option *ngFor="let gender of genders" [value]="gender">
+              {{ gender }}
+            </option>
+          </select>
+        </div>
+        <label for="image" class="form-label">URL Image</label>
+        <input
+          type="text"
+          class="form-control"
+          id="image"
+          name="image"
+          [(ngModel)]="character.image"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="container my-5">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Birth</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>Image</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let character of characters">
+        <td>{{ character.id }}</td>
+        <td>{{ character.name }}</td>
+        <td>{{ character.gender }}</td>
+        <td>{{ character.birthday }}</td>
+        <td>{{ character.height }}</td>
+        <td>{{ character.weight }}</td>
+        <td>
+          <img
+            src="{{ character.image }}"
+            alt=""
+            width="150px"
+            height="150px"
+          />
+        </td>
+        <td class="d-flex">
+          <a
+            class="btn btn-primary me-3"
+            href="characters/edit/{{ character.id }}"
+            >Edit</a
+          >
+          <button
+            class="btn btn-danger"
+            (click)="openDeleteConfirmModel(character.id)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-confirm-model
+  [itemId]="itemIdToDelete"
+  (deleteConfirmed)="deleteItem($event)"
+>
+</app-confirm-model>
