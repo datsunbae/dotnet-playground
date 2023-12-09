@@ -27,6 +27,27 @@ namespace EntityFrameworkCore.Data
                     Name = "Kodoku",
                     Age = 20,
                     Address = "Go Vap, HCM"
+                },
+                new Student
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Van Dat",
+                    Age = 21,
+                    Address = "Go Vap, HCM"
+                },
+                new Student
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Justin",
+                    Age = 21,
+                    Address = "USA"
+                },
+                new Student
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Ronaldo",
+                    Age = 22,
+                    Address = "USA"
                 }
             );
         }

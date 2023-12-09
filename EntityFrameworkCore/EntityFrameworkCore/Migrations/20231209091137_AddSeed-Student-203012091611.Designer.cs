@@ -4,6 +4,7 @@ using EntityFrameworkCore.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EntityFrameworkCore.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20231209091137_AddSeed-Student-203012091611")]
+    partial class AddSeedStudent203012091611
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,38 +49,24 @@ namespace EntityFrameworkCore.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("41b59623-549d-4bee-b055-ad6fcb98ccb6"),
+                            Id = new Guid("5801f726-3bd3-4524-a080-31dbde3cf4ce"),
                             Address = "Binh Tan, HCM",
                             Age = 18,
                             Name = "Datsunbae"
                         },
                         new
                         {
-                            Id = new Guid("daa362be-7555-471b-9afd-1e578d5ffb87"),
+                            Id = new Guid("f6a50b3b-7b98-4817-a8d9-3153c2efc454"),
                             Address = "Go Vap, HCM",
                             Age = 20,
                             Name = "Kodoku"
                         },
                         new
                         {
-                            Id = new Guid("c262da4f-6a04-484c-8996-21eb92f8aa05"),
+                            Id = new Guid("b59a518d-6bb2-48b1-a569-211a09f7080f"),
                             Address = "Go Vap, HCM",
                             Age = 21,
                             Name = "Van Dat"
-                        },
-                        new
-                        {
-                            Id = new Guid("c2df7bd2-1f47-4c60-a482-b936604a550c"),
-                            Address = "USA",
-                            Age = 21,
-                            Name = "Justin"
-                        },
-                        new
-                        {
-                            Id = new Guid("f02d37be-f61f-4212-87b4-5fb4a4f79ae0"),
-                            Address = "USA",
-                            Age = 22,
-                            Name = "Ronaldo"
                         });
                 });
 #pragma warning restore 612, 618
